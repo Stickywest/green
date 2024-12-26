@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/HomePage';
 import About from './pages/AboutPage';
 import Contact from './pages/ContactPage';
@@ -8,8 +8,10 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
+  const basename = process.env.NODE_ENV === 'production' ? '/green' : '';
+
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="min-h-screen flex flex-col">
         {/* Navbar */}
         <Navbar />
@@ -20,7 +22,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/join" element={<JoinPage/>}/>
+            <Route path="/join" element={<JoinPage />} />
           </Routes>
         </main>
 

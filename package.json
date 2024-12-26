@@ -3,21 +3,20 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage":  "https://stickywest.github.io/green",
+  "homepage":  "https://stickywest.github.io/green/",
 
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
     
   },
   "dependencies": {
     "firebase": "^11.1.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react-dom": "^18.3.1", 
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.1"
   },
