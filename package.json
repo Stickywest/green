@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Stickywest/green-leaders-initiative" ,
+  "homepage":  "https://stickywest.github.io/green",
+
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
